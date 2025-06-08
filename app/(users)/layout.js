@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-import Navigation from "../components/Navigation";
+import Navigation from "@/components/Navigation";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -11,7 +10,7 @@ import Navigation from "../components/Navigation";
 // const geistMono = Geist_Mono({
 //   variable: "--font-geist-mono",
 //   subsets: ["latin"],
-// });
+// });  
 
 // export const metadata = {
 //   title: "Create Next App",
