@@ -8,6 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --font-roboto: var(--font-roboto);
+  --font-work: var(--font-work-sans);
 }
 
 @media (prefers-color-scheme: dark) {
