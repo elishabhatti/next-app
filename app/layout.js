@@ -2,6 +2,24 @@ import "./globals.css";
 import { Roboto, Work_Sans } from "next/font/google";
 import Navigation from "@/components/Navigation";
 
+export const metadata = {
+  title: {
+    default: "Thapa Technical | Learn Web Development",
+    template: "%s | Thapa Technical",
+  },
+  description:
+    "Free Tutorials on React.js Next.js and web development by Thapa Technical",
+  keywords: ["React Js", "Next.js", "Web Development", "Thapa Technical"],
+  icons: {
+    icon: "/vercel.svg",
+  },
+  metadataBase: new URL("https://yourdomin"),
+  openGraph: {
+    title: "Thapa Techical",
+    description: "Join the best web dev tutorials!",
+  },
+};
+
 const roboto = Roboto({
   subsets: ["latin"],
   variable: "--font-roboto",

@@ -2,6 +2,16 @@ import Image from "next/image";
 import style from "./service.module.css";
 import thapa from "@/public/image.png";
 
+export const metadata = {
+  title: "Service Page",
+  description: "This is my service page",
+  authors: [
+    { name: "Elisha Jameel" },
+    { name: "Thapa Technical", url: "thapatechnical.com" },
+  ],
+  keywords: ["nextjs", "reactjs", "fullstack"],
+};
+
 const Services = async () => {
   return (
     <>
