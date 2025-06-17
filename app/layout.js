@@ -33,7 +33,9 @@ const work_sans = Work_Sans({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${work_sans.variable}`}>
+      <body 
+           cz-shortcut-listen="true"
+      className={`${roboto.variable} ${work_sans.variable}`} >
         {children}
       </body>
     </html>
