@@ -4,11 +4,12 @@ import { User, Users, Star, TrendingUp } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const DataFetchServer = (props) => {
+const DataFetchClient = () => {
   const [userInfo, setUserInfo] = useState({});
   const searchParams = useSearchParams();
   const userName = searchParams.get("name");
 
+  // Handle case where no name is provided
   if (!userName) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 flex items-center justify-center p-4">
@@ -30,8 +31,8 @@ const DataFetchServer = (props) => {
     const revealUserGender = async () => {
       const res = await fetch(`https://api.genderize.io/?name=${userName}`);
       const userData = await res.json();
-      setUserInfo(userData);
       console.log(userData);
+      setUserInfo(userData);
     };
     revealUserGender();
   }, []);
@@ -70,7 +71,7 @@ const DataFetchServer = (props) => {
             </div>
 
             <h1 className="text-3xl font-bold text-gray-800 mb-2 capitalize">
-              {userData.name}
+              {userInfo.name}
             </h1>
 
             <div
@@ -123,7 +124,7 @@ const DataFetchServer = (props) => {
                   Data Sample Size
                 </span>
                 <span className="text-sm font-bold text-gray-800">
-                  {userData.count.toLocaleString()}
+                  {userInfo.count.toLocaleString()}
                 </span>
               </div>
             </div>
@@ -156,4 +157,4 @@ const DataFetchServer = (props) => {
   );
 };
 
-export default DataFetchServer;
+export default DataFetchClient;
