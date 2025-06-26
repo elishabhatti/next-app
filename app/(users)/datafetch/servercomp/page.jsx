@@ -22,8 +22,10 @@ const DataFetchServer = async (props) => {
     );
   }
 
+  
   const res = await fetch(`https://api.genderize.io/?name=${userName}`);
   const userData = await res.json();
+  if(!userData.gender) return null;
   console.log(userData);
 
   const isMale = userData.gender === "male";
