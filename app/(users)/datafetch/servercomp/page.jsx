@@ -1,9 +1,9 @@
+import { Suspense } from "react";
 import DataCard from "./DataCard";
 
 const DataFetchServer = async (props) => {
   const searchParams = await props.searchParams;
   const userName = searchParams.name;
-
 
   // Handle case where no name is provided
   if (!userName) {
@@ -23,12 +23,19 @@ const DataFetchServer = async (props) => {
     );
   }
 
-
-
   return (
-    <div className="min-h-screen  flex items-center justify-center p-4">
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem amet saepe, debitis iste nostrum libero odit repellat labore, reiciendis quia rerum expedita. Consequatur suscipit perspiciatis cumque accusamus quo, dolore animi!</h1>
+    <div className="grid grid-cols-2 items-center justify-center gap-3 h-full">
+      <div className="h-full flex justify-center items-center">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem amet
+          saepe, debitis iste nostrum libero odit repellat labore, reiciendis
+          quia rerum expedita. Consequatur suscipit perspiciatis cumque
+          accusamus quo, dolore animi!
+        </h1>
+      </div>
+      <Suspense fallback={<div>Loading</div> }>
       <DataCard userName={userName} />
+      </Suspense>
     </div>
   );
 };
