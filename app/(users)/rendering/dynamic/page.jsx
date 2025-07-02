@@ -1,9 +1,10 @@
 import React from "react";
 import { db } from "@/config/db";
+export const dynamic = "force-dynamic";
 
 const DynamicPage = async () => {
   const [doctors] = await db.execute("select * from doctors");
-  console.log("Dynamic Doctors ",doctors);
+  console.log("Dynamic Doctors ");
 
   return (
     <div>
