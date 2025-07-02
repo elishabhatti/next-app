@@ -3,7 +3,7 @@ import { db } from "@/config/db";
 
 const DynamicPage = async () => {
   const [doctors] = await db.execute("select * from doctors");
-  console.log(doctors);
+  console.log("Dynamic Doctors ",doctors);
 
   return (
     <div>
