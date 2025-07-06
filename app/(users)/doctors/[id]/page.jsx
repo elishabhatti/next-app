@@ -1,6 +1,7 @@
 import React from "react";
 import { db } from "@/config/db";
 import { Mail, Phone, MapPin, Calendar, Award, User } from "lucide-react";
+import NotFound from "@/app/not-found";
 
 const formatDate = (dateString) => {
   return new Date(dateString).toLocaleDateString("en-US", {
@@ -20,7 +21,7 @@ const SingleDoctor = async ({ params }) => {
   
 
   if (!doctor) {
-    return <div>Doctor not found.</div>;
+    return <NotFound/>
   }
 
   return (
