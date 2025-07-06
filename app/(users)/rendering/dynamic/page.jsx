@@ -1,6 +1,7 @@
 import React from "react";
 import { db } from "@/config/db";
 export const dynamic = "force-dynamic";
+import { cache } from "react";
 
 const DynamicPage = async () => {
   const doctors = await getAllDoctors();
@@ -27,8 +28,8 @@ export const DoctorsList = async () => {
   );
 };
 
-const getAllDoctors = async () => {
+const getAllDoctors = cache(async () => {
   const [doctors] = await db.execute("select * from doctors");
   console.log("Dynamic Doctors ");
   return doctors;
-};
+});
