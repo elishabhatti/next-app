@@ -1,5 +1,6 @@
 import React from "react";
 import { db } from "@/config/db";
+import DoctorsList from "@/components/DoctorsList";
 export const dynamic = "force-dynamic";
 
 const DynamicPage = async () => {
@@ -9,11 +10,7 @@ const DynamicPage = async () => {
   return (
     <div>
       <h1>Hi Full Stack Developer</h1>
-      <ul>
-        {doctors.map((doctor) => {
-          return <li key={doctor.doctor_id}>{doctor.first_name}</li>;
-        })}
-      </ul>
+      <DoctorsList doctors={doctors} />
     </div>
   );
 };
