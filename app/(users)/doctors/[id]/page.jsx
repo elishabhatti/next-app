@@ -11,6 +11,15 @@ const formatDate = (dateString) => {
   });
 };
 
+export async function generateStaticParams() {
+  const [doctors] = await db.execute(`SELECT doctor_id FROM doctors`);
+  return doctors.map((doctor) => ({
+    id: doctor.doctor_id.toString(),
+  }));
+}
+
+
+
 const SingleDoctor = async ({ params }) => {
   const [[doctor]] = await db.execute(
     "SELECT * FROM doctors WHERE doctor_id = ?",
@@ -18,10 +27,9 @@ const SingleDoctor = async ({ params }) => {
   );
 
   console.log(doctor);
-  
 
   if (!doctor) {
-    return <NotFound/>
+    return <NotFound />;
   }
 
   return (
