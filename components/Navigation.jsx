@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <header className="grid grid-cols-2">
+    <header className="grid grid-cols-2 bg-black">
       <div className="">Elisha</div>
       <nav>
         <ul className="flex gap-4">
