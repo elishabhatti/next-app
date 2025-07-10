@@ -1,10 +1,12 @@
+import { contactAction } from "./contact.action";
+
 const Contact = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-black px-4">
       <div className="bg-[#0e0e1a] p-8 rounded-lg w-full max-w-md shadow-lg">
         <h1 className="text-pink-400 text-3xl font-bold text-center mb-6">Get In Touch</h1>
         
-        <form className="flex flex-col space-y-4">
+        <form action={contactAction} className="flex flex-col space-y-4">
           <div>
             <label className="text-white text-sm mb-1 block">Full Name</label>
             <input
