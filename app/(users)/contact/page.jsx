@@ -1,4 +1,10 @@
-import { contactAction } from "./contact.action";
+"use client";
+// import { contactAction } from "./contact.action";
+
+const contactAction = (formData) => {
+  const { full_name, email, message } = Object.fromEntries(formData.entries());
+  console.log(full_name, email, message);
+};
 
 const Contact = () => {
   return (
