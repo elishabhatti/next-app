@@ -1,4 +1,7 @@
 "use client";
+
+import { useActionState } from "react";
+
 // import { contactAction } from "./contact.action";
 
 const contactAction = (formData) => {
@@ -7,6 +10,7 @@ const contactAction = (formData) => {
 };
 
 const Contact = () => {
+  const [state, formAction, isPending] = useActionState(contactAction, initialState, permalink)
   return (
     <section className="min-h-screen flex items-center justify-center bg-black px-4">
       <div className="bg-[#0e0e1a] p-8 rounded-lg w-full max-w-md shadow-lg">
