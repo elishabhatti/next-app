@@ -60,6 +60,13 @@ const Contact = () => {
           </button>
         </form>
       </div>
+      <section>
+        {state && (
+          <p className={`${state.success ? "bg-green-500" : "bg-red-500"}`}>
+            {state.message}
+          </p>
+        )}
+      </section>
     </section>
   );
 };
