@@ -18,7 +18,7 @@ const Contact = () => {
           Get In Touch
         </h1>
 
-        <form action={contactAction} className="flex flex-col space-y-4">
+        <form action={formAction} className="flex flex-col space-y-4">
           <div>
             <label className="text-white text-sm mb-1 block">Full Name</label>
             <input
