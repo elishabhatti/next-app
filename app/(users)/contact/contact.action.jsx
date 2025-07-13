@@ -1,7 +1,7 @@
 "use server";
 import { db } from "@/config/db";
 
-export const contactAction = async (formData) => {
+export const contactAction = async (previousState, formData) => {
   try {
     const { full_name, email, message } = Object.fromEntries(
       formData.entries()

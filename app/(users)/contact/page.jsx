@@ -1,16 +1,16 @@
 "use client";
 
 import { useActionState } from "react";
+import { contactAction } from "./contact.action";
 
-// import { contactAction } from "./contact.action";
-
-const contactAction = (formData) => {
-  const { full_name, email, message } = Object.fromEntries(formData.entries());
-  console.log(full_name, email, message);
-};
+// const contactAction = (formData) => {
+//   const { full_name, email, message } = Object.fromEntries(formData.entries());
+//   console.log(full_name, email, message);
+// };
 
 const Contact = () => {
-  const [state, formAction, isPending] = useActionState(contactAction, initialState, permalink)
+  const [state, formAction, isPending] = useActionState(contactAction, null);
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-black px-4">
       <div className="bg-[#0e0e1a] p-8 rounded-lg w-full max-w-md shadow-lg">
@@ -53,9 +53,10 @@ const Contact = () => {
 
           <button
             type="submit"
+            disabled={isPending}
             className="bg-pink-600 hover:bg-pink-700 text-white py-2 rounded font-semibold transition"
           >
-            Send Message
+            {isPending ? <span>Loading...</span> : <span>Send Message</span>}
           </button>
         </form>
       </div>
