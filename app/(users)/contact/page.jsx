@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import { contactAction } from "./contact.action";
+import { useFormState } from "react-dom";
 
 // const contactAction = (formData) => {
 //   const { full_name, email, message } = Object.fromEntries(formData.entries());
@@ -51,15 +52,7 @@ const Contact = () => {
             />
           </div>
 
-
-<Submit/>
-          <button
-            type="submit"
-            disabled={isPending}
-            className="bg-pink-600 hover:bg-pink-700 text-white py-2 rounded font-semibold transition"
-          >
-            {isPending ? <span>Loading...</span> : <span>Send Message</span>}
-          </button>
+          <Submit />
         </form>
       </div>
       <section>
@@ -76,15 +69,16 @@ const Contact = () => {
 export default Contact;
 
 const Submit = () => {
+  const { pending, data, method, action } = useFormState();
   return (
     <>
-     <button
-            type="submit"
-            disabled={isPending}
-            className="bg-pink-600 hover:bg-pink-700 text-white py-2 rounded font-semibold transition"
-          >
-            {isPending ? <span>Loading...</span> : <span>Send Message</span>}
-          </button>
+      <button
+        type="submit"
+        disabled={pending}
+        className="bg-pink-600 hover:bg-pink-700 text-white py-2 rounded font-semibold transition"
+      >
+        {pending ? <span>Loading...</span> : <span>Send Message</span>}
+      </button>
     </>
-  )
-}
+  );
+};
