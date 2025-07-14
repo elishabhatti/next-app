@@ -51,6 +51,8 @@ const Contact = () => {
             />
           </div>
 
+
+<Submit/>
           <button
             type="submit"
             disabled={isPending}
@@ -72,3 +74,17 @@ const Contact = () => {
 };
 
 export default Contact;
+
+const Submit = () => {
+  return (
+    <>
+     <button
+            type="submit"
+            disabled={isPending}
+            className="bg-pink-600 hover:bg-pink-700 text-white py-2 rounded font-semibold transition"
+          >
+            {isPending ? <span>Loading...</span> : <span>Send Message</span>}
+          </button>
+    </>
+  )
+}
