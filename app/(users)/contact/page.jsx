@@ -2,7 +2,7 @@
 
 import { useActionState } from "react";
 import { contactAction } from "./contact.action";
-import { useFormState } from "react-dom";
+import { useFormState, useFormStatus } from "react-dom";
 
 // const contactAction = (formData) => {
 //   const { full_name, email, message } = Object.fromEntries(formData.entries());
@@ -69,7 +69,7 @@ const Contact = () => {
 export default Contact;
 
 const Submit = () => {
-  const { pending, data, method, action } = useFormState();
+  const { pending, data, method, action } = useFormStatus();
   return (
     <>
       <button
