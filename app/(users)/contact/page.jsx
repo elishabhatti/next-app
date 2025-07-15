@@ -16,7 +16,7 @@ const Contact = () => {
     <section className="min-h-screen flex items-center justify-center bg-black px-4">
       <div className="bg-[#0e0e1a] p-8 rounded-lg w-full max-w-md shadow-lg">
         <h1 className="text-pink-400 text-3xl font-bold text-center mb-6">
-          Get In Touch
+          Get In Touch 
         </h1>
 
         <form action={formAction} className="flex flex-col space-y-4">
