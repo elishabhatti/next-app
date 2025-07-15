@@ -17,7 +17,7 @@ export const contactAction = async (previousState, formData) => {
     // return { success: true, message: "Form Submitted Successfully!" };
     redirect("/")
   } catch (error) {
-    console.error("Server Error", error);
+    if(error.message === "NEXT_REDIRECT") throw error
     return { success: true, message: "Error While Submitting Form!" };
   }
 };
