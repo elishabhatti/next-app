@@ -30,6 +30,7 @@ export default function RegistrationForm() {
       email: "",
       password: "",
     });
+    router.push("/");
   };
   return (
     <section className="min-h-screen flex items-center justify-center bg-black px-4">
