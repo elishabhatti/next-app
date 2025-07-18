@@ -63,7 +63,7 @@ export default function RegistrationForm() {
           </div>
 
           <div>
-            <label className="text-white text-sm mb-1 block">Message</label>
+            <label className="text-white text-sm mb-1 block">Password</label>
             <input
               name="password"
               type="password"
