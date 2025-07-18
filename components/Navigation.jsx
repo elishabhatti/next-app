@@ -13,16 +13,13 @@ export default function Navigation() {
             <Link href="/about">About</Link>
           </li>
           <li>
+            <Link href="/signup">Sign Up</Link>
+          </li>
+          <li>
             <Link href="/service">Service</Link>
           </li>
           <li>
             <Link href="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link href="/clientcomp">Client Component</Link>
-          </li>
-          <li>
-            <Link href="/servercomp">Server Component</Link>
           </li>
         </ul>
       </nav>
