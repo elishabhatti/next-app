@@ -2,11 +2,8 @@
 import { db } from "@/config/db";
 import { redirect } from "next/navigation";
 
-export const contactAction = async (previousState, formData) => {
+export const contactAction = async ({ full_name, email, message }) => {
   try {
-    const { full_name, email, message } = Object.fromEntries(
-      formData.entries()
-    );
     console.log(full_name, email, message);
 
     await db.execute(
@@ -14,10 +11,10 @@ export const contactAction = async (previousState, formData) => {
       [full_name, email, message]
     );
 
-    // return { success: true, message: "Form Submitted Successfully!" };
-    redirect("/")
+    return { success: true, message: "Form Submitted Successfully!" };
+    // redirect("/")
   } catch (error) {
-    if(error.message === "NEXT_REDIRECT") throw error
+    if (error.message === "NEXT_REDIRECT") throw error;
     return { success: true, message: "Error While Submitting Form!" };
   }
 };
