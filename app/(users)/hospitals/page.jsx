@@ -76,7 +76,7 @@ const HospitalForm = async () => {
                     key={index}
                     className="border-t hover:bg-gray-50 transition text-black"
                   >
-                    <td className="py-2 px-4">{hospital.hospital_id}</td>
+                    <td className="py-2 px-4">{index + 1}</td>
                     <td className="py-2 px-4">{hospital.name}</td>
                     <td className="py-2 px-4">{hospital.city}</td>
                     <td className="py-2 px-4">{hospital.state}</td>
