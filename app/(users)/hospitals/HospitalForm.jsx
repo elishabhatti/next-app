@@ -1,15 +1,15 @@
 "use client";
 
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { createHospitalAction } from "./hospital.action";
 
 export const HospitalForm = () => {
-  //   const router = useRouter();
+    const router = useRouter();
 
   const handleCreateHospital = async (formData) => {
     const data = Object.fromEntries(formData);
     await createHospitalAction(data);
-    // router.refresh();
+    router.refresh();
   };
 
   return (
