@@ -71,9 +71,9 @@ const HospitalForm = async () => {
                 </tr>
               </thead>
               <tbody>
-                {hospitalsData.map((hospital) => (
+                {hospitalsData.map((hospital, index) => (
                   <tr
-                    key={hospital.hospital_id}
+                    key={index}
                     className="border-t hover:bg-gray-50 transition text-black"
                   >
                     <td className="py-2 px-4">{hospital.hospital_id}</td>
