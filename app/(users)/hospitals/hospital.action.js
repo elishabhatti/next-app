@@ -14,9 +14,7 @@ export const createHospitalAction = async (formData) => {
       [name, city, state, department, established_year]
     );
 
-    revalidatePath("/hospitals");
-
-    // return { success: true, message: "Hospital data submitted successfully" };
+    revalidatePath("/hospitals"); 
   } catch (error) {
     if (error.message === "NEXT_REDIRECT") throw error;
     console.log(error);
