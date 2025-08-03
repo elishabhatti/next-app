@@ -19,6 +19,7 @@ const Services = () => {
             {/* <!-- Team Member 1 --> */}
             <motion.div
               initial={{ opacity: 1, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.1 }}
               className="bg-white rounded-lg shadow-md p-6"
             >
