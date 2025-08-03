@@ -17,7 +17,10 @@ const Services = () => {
 
           <div className="grid grid-cols-3 gap-8">
             {/* <!-- Team Member 1 --> */}
-            <motion.div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-white rounded-lg shadow-md p-6"
+            >
               <div className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <Image
                   src={thapa}
