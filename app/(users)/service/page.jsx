@@ -18,9 +18,9 @@ const Services = () => {
           <div className="grid grid-cols-3 gap-8">
             {/* <!-- Team Member 1 --> */}
             <motion.div
-              initial={{ opacity: 1, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
+              initial={{ opacity: 1, y: 40, scale: 1 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeInOut", scale: 1 }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white rounded-lg shadow-md p-6"
