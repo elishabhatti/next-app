@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import style from "./service.module.css";
 import thapa from "@/public/image.png";
+import motion from "motion"
 
 export const metadata = {
   title: "Service Page",
