@@ -3,7 +3,7 @@
 import Image from "next/image";
 import style from "./service.module.css";
 import thapa from "@/public/image.png";
-import motion from "motion"
+import { motion } from "motion/react";
 
 const Services = () => {
   return (
@@ -18,7 +18,10 @@ const Services = () => {
           <div className="grid grid-cols-3 gap-8">
             {/* <!-- Team Member 1 --> */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
-              <motion.div className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <motion.div
+                s
+                className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center"
+              >
                 <Image
                   src={thapa}
                   className="w-full  h-full rounded-full"
