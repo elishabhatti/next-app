@@ -39,7 +39,12 @@ const Services = () => {
                   alt="Thapa Avatar"
                 />
               </motion.div>
-              <motion.h3 className="text-lg font-semibold text-center text-gray-800">
+              <motion.h3
+                initial={{ opacity: 1, y: 20, scale: 1 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.5, ease: "easeInOut", scale: 1 }}
+                className="text-lg font-semibold text-center text-gray-800"
+              >
                 Thapa Technical
               </motion.h3>
               <p className="text-sm text-gray-600 text-center mt-2">
