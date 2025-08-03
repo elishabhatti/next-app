@@ -25,7 +25,7 @@ const Services = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-white rounded-lg shadow-md p-6"
             >
-              <div className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <motion.div className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <Image
                   src={thapa}
                   className="w-full  h-full rounded-full"
@@ -34,7 +34,7 @@ const Services = () => {
                   height={500}
                   alt="Thapa Avatar"
                 />
-              </div>
+              </motion.div>
               <h3 className="text-lg font-semibold text-center text-gray-800">
                 Thapa Technical
               </h3>
