@@ -27,6 +27,7 @@ const Services = () => {
             >
               <motion.div
                 whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center"
               >
                 <Image
