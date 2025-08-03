@@ -5,6 +5,11 @@ import style from "./service.module.css";
 import thapa from "@/public/image.png";
 import { motion } from "motion/react";
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeInOut" } },
+}
+
 const Services = () => {
   return (
     <>
@@ -18,9 +23,9 @@ const Services = () => {
           <div className="grid grid-cols-3 gap-8">
             {/* <!-- Team Member 1 --> */}
             <motion.div
-              initial={{ opacity: 1, y: 20, scale: 1 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.5, ease: "easeInOut", scale: 1 }}
+            variants={cardVariants}
+              initial="hidden"
+              animate="show"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="bg-white rounded-lg shadow-md p-6"
@@ -42,7 +47,7 @@ const Services = () => {
               <motion.h3
                 initial={{ opacity: 1, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
+                transition={{ duration: 0.5, ease: "easeInOut", delay: 0.6 }}
                 className="text-lg font-semibold text-center text-gray-800"
               >
                 Thapa Technical
