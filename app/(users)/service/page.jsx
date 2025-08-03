@@ -25,7 +25,10 @@ const Services = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-white rounded-lg shadow-md p-6"
             >
-              <motion.div className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center"
+              >
                 <Image
                   src={thapa}
                   className="w-full  h-full rounded-full"
