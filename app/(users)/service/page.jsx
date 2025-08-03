@@ -18,6 +18,7 @@ const Services = () => {
           <div className="grid grid-cols-3 gap-8">
             {/* <!-- Team Member 1 --> */}
             <motion.div
+              initial={{ opacity: 1, y: 40 }}
               whileHover={{ scale: 1.1 }}
               className="bg-white rounded-lg shadow-md p-6"
             >
