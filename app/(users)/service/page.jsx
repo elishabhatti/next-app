@@ -17,11 +17,8 @@ const Services = () => {
 
           <div className="grid grid-cols-3 gap-8">
             {/* <!-- Team Member 1 --> */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
-              <motion.div
-                s
-                className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center"
-              >
+            <motion.div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+              <div className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <Image
                   src={thapa}
                   className="w-full  h-full rounded-full"
@@ -30,7 +27,7 @@ const Services = () => {
                   height={500}
                   alt="Thapa Avatar"
                 />
-              </motion.div>
+              </div>
               <h3 className="text-lg font-semibold text-center text-gray-800">
                 Thapa Technical
               </h3>
@@ -40,7 +37,7 @@ const Services = () => {
               <p className="text-xs text-gray-500 text-center mt-1">
                 React & TypeScript
               </p>
-            </div>
+            </motion.div>
 
             {/* <!-- Team Member 2 --> */}
             <div className="bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
