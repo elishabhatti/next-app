@@ -40,9 +40,9 @@ const Services = () => {
                 />
               </motion.div>
               <motion.h3
-                initial={{ opacity: 1, y: 20, scale: 1 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeInOut", scale: 1 }}
+                initial={{ opacity: 1, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
                 className="text-lg font-semibold text-center text-gray-800"
               >
                 Thapa Technical
