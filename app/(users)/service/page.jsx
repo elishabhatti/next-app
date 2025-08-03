@@ -5,15 +5,6 @@ import style from "./service.module.css";
 import thapa from "@/public/image.png";
 import motion from "motion"
 
-export const metadata = {
-  title: "Service Page",
-  description: "This is my service page",
-  authors: [
-    { name: "Elisha Jameel" },
-    { name: "Thapa Technical", url: "thapatechnical.com" },
-  ],
-  keywords: ["nextjs", "reactjs", "fullstack"],
-};
 
 const Services = async () => {
   return (
