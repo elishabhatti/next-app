@@ -39,8 +39,20 @@ const Services = () => {
     });
   }, []);
 
-  const handleMouseEnter = () => {}
-  const handleMouseLeave = () => {}
+  const handleMouseEnter = () => {
+    if (!cardRef.current) return;
+    if (hoverTween.current) {
+      hoverTween.current.kill();
+    }
+    hoverTween.current = gsap.to(cardRef.current, {
+      duration: 0.3,
+      y: -50,
+      boxShadow:
+        "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+      ease: "power2.out",
+    });
+  };
+  const handleMouseLeave = () => {};
   return (
     <>
       <h1 className={style.common_heading}>Hello Services</h1>
