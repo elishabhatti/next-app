@@ -4,17 +4,36 @@ import Image from "next/image";
 import style from "./service.module.css";
 import thapa from "@/public/image.png";
 import { motion } from "motion/react";
-import { useRef } from "react";
-
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeInOut" } },
-}
-
+};
 
 const Services = () => {
-  const cardRef = useRef()
+  const cardRef = useRef();
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const element = cardRef.current;
+      // set
+      gsap.set(element, {
+        opacity: 0,
+        y: 50,
+        scale: 2,
+      });
+      // to
+      gsap.to(element, {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        ease: "power3.out",
+      });
+      return () => ctx.revert();
+    });
+  }, []);
   return (
     <>
       <h1 className={style.common_heading}>Hello Services</h1>
@@ -27,7 +46,7 @@ const Services = () => {
           <div className="grid grid-cols-3 gap-8">
             {/* <!-- Team Member 1 --> */}
             <motion.div
-            variants={cardVariants}
+              variants={cardVariants}
               initial="hidden"
               animate="show"
               whileHover={{ scale: 1.1 }}
@@ -80,7 +99,10 @@ const Services = () => {
             </div>
 
             {/* <!-- Team Member 3 --> */}
-            <div ref={cardRef} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+            <div
+              ref={cardRef}
+              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
+            >
               <div className="w-24 h-24 bg-purple-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-2xl font-bold text-purple-600">MJ</span>
               </div>
