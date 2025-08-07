@@ -18,6 +18,8 @@ const Services = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const element = cardRef.current;
+
+      if (element) return;
       // set
       gsap.set(element, {
         opacity: 0,
