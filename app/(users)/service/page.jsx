@@ -104,6 +104,8 @@ const Services = () => {
             {/* <!-- Team Member 3 --> */}
             <div
               ref={cardRef}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
             >
               <div className="w-24 h-24 bg-purple-200 rounded-full mx-auto mb-4 flex items-center justify-center">
