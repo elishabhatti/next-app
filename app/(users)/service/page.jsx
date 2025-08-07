@@ -4,13 +4,17 @@ import Image from "next/image";
 import style from "./service.module.css";
 import thapa from "@/public/image.png";
 import { motion } from "motion/react";
+import { useRef } from "react";
+
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeInOut" } },
 }
 
+
 const Services = () => {
+  const cardRef = useRef()
   return (
     <>
       <h1 className={style.common_heading}>Hello Services</h1>
@@ -76,7 +80,7 @@ const Services = () => {
             </div>
 
             {/* <!-- Team Member 3 --> */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+            <div ref={cardRef} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
               <div className="w-24 h-24 bg-purple-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-2xl font-bold text-purple-600">MJ</span>
               </div>
