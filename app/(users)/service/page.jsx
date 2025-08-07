@@ -14,6 +14,7 @@ const cardVariants = {
 
 const Services = () => {
   const cardRef = useRef();
+  const hoverTween = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -37,6 +38,9 @@ const Services = () => {
       return () => ctx.revert();
     });
   }, []);
+
+  const handleMouseEnter = () => {}
+  const handleMouseLeave = () => {}
   return (
     <>
       <h1 className={style.common_heading}>Hello Services</h1>
