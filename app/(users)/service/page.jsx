@@ -26,6 +26,7 @@ const Services = () => {
       });
       // to
       gsap.to(element, {
+        duration: 0.8,
         opacity: 1,
         y: 0,
         scale: 1,
