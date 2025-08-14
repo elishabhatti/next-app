@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Page = () => {
   return (
@@ -7,7 +8,11 @@ const Page = () => {
         The command above will add the Button component to your project. You can
         then import it like this:
       </p>
-      <Button variant={"outline"} size={'lg'}>Click Me</Button>
+      <Button variant={"outline"} size={"lg"}>
+        <Link href="https://youtu.be/7TqsIx_UnFI?si=nU0yzMCLrtSe9cRJ">
+          Click Me
+        </Link>
+      </Button>
     </>
   );
 };
