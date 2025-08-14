@@ -7,9 +7,7 @@ const Page = () => {
         The command above will add the Button component to your project. You can
         then import it like this:
       </p>
-      <Button>
-        Button
-      </Button>
+      <Button variant={"outline"} size={'lg'}>Click Me</Button>
     </>
   );
 };
