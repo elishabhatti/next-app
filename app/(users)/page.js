@@ -1,8 +1,12 @@
-const Home = () => {
+const Page = () => {
   return (
     <>
-      <h1 className="font-roboto">Hello from Main Page</h1>
+      <p>
+        The command above will add the Button component to your project. You can
+        then import it like this:
+      </p>
     </>
   );
 };
-export default Home;
+
+export default Page;
