@@ -8,7 +8,7 @@ const Page = () => {
         The command above will add the Button component to your project. You can
         then import it like this:
       </p>
-      <Button variant={"outline"} size={"lg"}>
+      <Button asChild={true} variant={"outline"} size={"lg"}>
         <Link href="https://youtu.be/7TqsIx_UnFI?si=nU0yzMCLrtSe9cRJ">
           Click Me
         </Link>
