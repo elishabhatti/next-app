@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Link from "next/link";
 
 const Page = () => {
@@ -13,6 +14,7 @@ const Page = () => {
           Click Me
         </Link>
       </Button>
+      <Input/>
     </>
   );
 };
