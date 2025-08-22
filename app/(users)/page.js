@@ -1,3 +1,4 @@
+import DialogDemo from "@/components/DialogDemo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
@@ -14,7 +15,10 @@ const Page = () => {
           Click Me
         </Link>
       </Button>
-      <Input/>
+      <Input />
+      <section>
+        <DialogDemo />
+      </section>
     </>
   );
 };
