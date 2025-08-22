@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Roboto, Work_Sans } from "next/font/google";
-import Navigation from "@/components/Navigation";
 
 export const metadata = {
   title: {
@@ -33,9 +32,10 @@ const work_sans = Work_Sans({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body 
-           cz-shortcut-listen="true"
-      className={`${roboto.variable} ${work_sans.variable}`} >
+      <body
+        cz-shortcut-listen="true"
+        className={`${roboto.variable} ${work_sans.variable}`}
+      >
         {children}
       </body>
     </html>

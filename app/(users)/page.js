@@ -1,11 +1,10 @@
-import CarouselDemo from "@/components/CarouselDemo";
+import { CarouselDemo } from "@/components/CarouselDemo";
 import DialogDemo from "@/components/DialogDemo";
 import { DrawerDialogDemo } from "@/components/DrawerDialogDemo";
 
 const Page = () => {
-  let isDarkMode;
   return (
-    <>
+    <section className="grid place-items-center">
       <section>
         <DialogDemo />
       </section>
@@ -15,7 +14,7 @@ const Page = () => {
       <section>
         <CarouselDemo />
       </section>
-    </>
+    </section>
   );
 };
 
