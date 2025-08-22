@@ -18,6 +18,11 @@ export function CarouselDemo() {
         align: "start",
         loop: true,
       }}
+      plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}
       className="w-full max-w-xs"
     >
       <CarouselContent>
