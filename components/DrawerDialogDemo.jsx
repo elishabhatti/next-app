@@ -36,7 +36,7 @@ export function DrawerDialogDemo() {
         <DialogTrigger asChild>
           <Button variant="outline">Edit Profile</Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="sm:max-w-[425px]" showCloseButton={false}>
           <DialogHeader>
             <DialogTitle>Edit profile</DialogTitle>
             <DialogDescription>
@@ -45,6 +45,9 @@ export function DrawerDialogDemo() {
             </DialogDescription>
           </DialogHeader>
           <ProfileForm />
+          <DrawerClose asChild>
+            <Button variant="outline">Cancel</Button>
+          </DrawerClose>
         </DialogContent>
       </Dialog>
     );
