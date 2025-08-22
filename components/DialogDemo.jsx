@@ -26,7 +26,7 @@ const DialogDemo = () => {
         </DialogHeader>
         <DialogFooter>
           <DialogClose asChild>
-            <Button variant="outline">Cancel</Button>
+            <Button>Cancel</Button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>
