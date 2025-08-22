@@ -1,5 +1,5 @@
 import DialogDemo from "@/components/DialogDemo";
-import DrawerDemo from "@/components/DrawerDemo";
+import { DrawerDialogDemo } from "@/components/DrawerDialogDemo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
@@ -19,7 +19,7 @@ const Page = () => {
       <Input />
       <section>
         <DialogDemo />
-        <DrawerDemo />
+        <DrawerDialogDemo />
       </section>
     </>
   );
