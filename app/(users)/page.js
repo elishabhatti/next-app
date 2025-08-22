@@ -1,25 +1,19 @@
+import CarouselDemo from "@/components/CarouselDemo";
 import DialogDemo from "@/components/DialogDemo";
 import { DrawerDialogDemo } from "@/components/DrawerDialogDemo";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import Link from "next/link";
 
 const Page = () => {
+  let isDarkMode;
   return (
     <>
-      <p>
-        The command above will add the Button component to your project. You can
-        then import it like this:
-      </p>
-      <Button asChild={true} variant={"outline"} size={"lg"}>
-        <Link href="https://youtu.be/7TqsIx_UnFI?si=nU0yzMCLrtSe9cRJ">
-          Click Me
-        </Link>
-      </Button>
-      <Input />
       <section>
         <DialogDemo />
+      </section>
+      <section>
         <DrawerDialogDemo />
+      </section>
+      <section>
+        <CarouselDemo />
       </section>
     </>
   );
