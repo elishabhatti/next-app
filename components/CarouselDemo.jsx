@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export function CarouselDemo() {
   return (
