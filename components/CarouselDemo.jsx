@@ -11,9 +11,9 @@ import {
 
 export function CarouselDemo() {
   return (
-    <Carousel className="w-full max-w-xs">
+    <Carousel orientation="vertical" className="w-full max-w-xs">
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
+        {Array.from({ length: 10 }).map((_, index) => (
           <CarouselItem className="basis-1/3" key={index}>
             <div className="p-1">
               <Card>
