@@ -11,7 +11,13 @@ import {
 
 export function CarouselDemo() {
   return (
-    <Carousel orientation="vertical" className="w-full max-w-xs">
+    <Carousel
+      opts={{
+        align: "start",
+        loop: true,
+      }}
+      className="w-full max-w-xs"
+    >
       <CarouselContent>
         {Array.from({ length: 10 }).map((_, index) => (
           <CarouselItem className="basis-1/3" key={index}>
