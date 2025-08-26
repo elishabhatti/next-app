@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
         className={`${roboto.variable} ${work_sans.variable}`}
       >
         {children}
-        <Toaster position="top-center" />
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   );
