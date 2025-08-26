@@ -48,6 +48,26 @@ const SonnerDemo = () => {
       >
         Render Error Toast
       </button>
+      <button
+        className="toast-button"
+        onClick={() => {
+          toast(
+            <div>
+              A Custom toast with a
+              <a
+                href="https://youtu.be/RUG5GVDZkOQ?list=PLwGdqUZWnOp0lwvSBaIzzgV9X0ZiZ-42O"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline ml-2"
+              >
+                link
+              </a>
+            </div>
+          );
+        }}
+      >
+        Next.js Shadcn Sonner
+      </button>
     </div>
   );
 };
