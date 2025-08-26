@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Roboto, Work_Sans } from "next/font/google";
+import { Toaster } from "sonner";
 
 export const metadata = {
   title: {
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         className={`${roboto.variable} ${work_sans.variable}`}
       >
         {children}
+        <Toaster position="top-center" />
       </body>
     </html>
   );
