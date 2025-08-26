@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { Roboto, Work_Sans } from "next/font/google";
 import { Toaster } from "sonner";
@@ -37,8 +38,15 @@ export default function RootLayout({ children }) {
         cz-shortcut-listen="true"
         className={`${roboto.variable} ${work_sans.variable}`}
       >
-        {children}
-        <Toaster position="top-center" richColors />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster position="top-center" richColors />
+        </ThemeProvider>
       </body>
     </html>
   );
