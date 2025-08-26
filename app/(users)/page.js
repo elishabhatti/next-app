@@ -2,6 +2,7 @@ import { CarouselDemo } from "@/components/CarouselDemo";
 import DialogDemo from "@/components/DialogDemo";
 import { DrawerDialogDemo } from "@/components/DrawerDialogDemo";
 import SheetDemo from "@/components/SheetDemo";
+import SonnerDemo from "@/components/SonnerDemo";
 
 const Page = () => {
   return (
@@ -17,6 +18,9 @@ const Page = () => {
       </section>
       <section>
         <SheetDemo />
+      </section>
+      <section>
+        <SonnerDemo/>
       </section>
     </section>
   );
