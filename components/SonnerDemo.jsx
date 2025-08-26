@@ -7,7 +7,7 @@ import { Megaphone } from "lucide-react";
 
 const SonnerDemo = () => {
   return (
-    <div>
+    <div className="flex gap-5 items-center">
       <Button
         variant="outline"
         onClick={() =>
@@ -24,9 +24,29 @@ const SonnerDemo = () => {
       >
         Show Toast
       </Button>
-      <button className="toast-button" onClick={() => {
-        toast.success("This is a success toast")
-      }}>Render Toast
+      <button
+        className="toast-button"
+        onClick={() => {
+          toast.success("This is a success toast");
+        }}
+      >
+        Render Success Toast
+      </button>
+      <button
+        className="toast-button"
+        onClick={() => {
+          toast.warning("This is a warning toast");
+        }}
+      >
+        Render Warning Toast
+      </button>
+      <button
+        className="toast-button"
+        onClick={() => {
+          toast.error("This is a error toast");
+        }}
+      >
+        Render Error Toast
       </button>
     </div>
   );
