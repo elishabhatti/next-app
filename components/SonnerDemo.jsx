@@ -3,6 +3,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { toast } from "sonner";
+import { Megaphone } from "lucide-react";
 
 const SonnerDemo = () => {
   return (
@@ -12,6 +13,8 @@ const SonnerDemo = () => {
         onClick={() =>
           toast("Event has been created", {
             description: "Sunday, December 03, 2023 at 9:00 AM",
+            duration: 5000,
+            icon: <Megaphone />,
             action: {
               label: "Undo",
               onClick: () => console.log("Undo"),
