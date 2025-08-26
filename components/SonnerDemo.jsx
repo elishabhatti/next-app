@@ -14,7 +14,7 @@ const SonnerDemo = () => {
           toast("Event has been created", {
             description: "Sunday, December 03, 2023 at 9:00 AM",
             duration: 5000,
-            icon: <Megaphone />,
+            icon: <Megaphone className="size-4" />,
             action: {
               label: "Undo",
               onClick: () => console.log("Undo"),
@@ -24,6 +24,10 @@ const SonnerDemo = () => {
       >
         Show Toast
       </Button>
+      <button className="toast-button" onClick={() => {
+        toast.success("This is a success toast")
+      }}>Render Toast
+      </button>
     </div>
   );
 };
